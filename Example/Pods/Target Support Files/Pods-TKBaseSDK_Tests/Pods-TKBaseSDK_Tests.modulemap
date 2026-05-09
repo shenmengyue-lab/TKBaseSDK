@@ -1,0 +1,6 @@
+framework module Pods_TKBaseSDK_Tests {
+  umbrella header "Pods-TKBaseSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

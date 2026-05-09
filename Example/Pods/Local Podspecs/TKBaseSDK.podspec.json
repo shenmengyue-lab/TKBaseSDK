@@ -1,0 +1,22 @@
+{
+  "name": "TKBaseSDK",
+  "version": "0.1.0",
+  "summary": "A short description of TKBaseSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/shenmengyue@talk-cloud.com/TKBaseSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "shenmengyue@talk-cloud.com": "605026935@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/shenmengyue@talk-cloud.com/TKBaseSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "TKBaseSDK/Classes/**/*"
+}

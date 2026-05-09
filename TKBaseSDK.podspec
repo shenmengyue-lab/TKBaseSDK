@@ -28,9 +28,23 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/shenmengyue@talk-cloud.com/TKBaseSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'TKBaseSDK/Classes/**/*'
+  s.ios.vendored_frameworks = 'TKBaseSDK/Frameworks/*.framework'
+  # 资源已内嵌在各 .framework 的 .bundle 中，无需单独声明 s.resources
+  # 与 use_frameworks! 配合使用；勿开启 static_framework，否则与动态 vendored framework 链接易冲突
+  s.static_framework = false
+
+  # 2. 强制仅支持 arm64 架构（真机专属架构）
+  s.pod_target_xcconfig = {
+     "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "x86_64",
+     "VALID_ARCHS" => "arm64"
+   }
+
+  # 三方库
+  s.dependency 'lottie-ios', '2.5.3'
+  s.dependency 'Masonry'
+  s.dependency 'SDWebImage'
   
   # s.resource_bundles = {
   #   'TKBaseSDK' => ['TKBaseSDK/Assets/*.png']
