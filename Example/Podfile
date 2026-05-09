@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'TKBaseSDK_Example' do
+  pod 'TKBaseSDK', :path => '../'
+
+  target 'TKBaseSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
