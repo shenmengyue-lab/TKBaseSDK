@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TKBaseSDK'
-  s.version          = '0.1.0'
+  s.version          = '4.18.3.2'
   s.summary          = 'A short description of TKBaseSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -21,25 +21,24 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/shenmengyue@talk-cloud.com/TKBaseSDK'
+  s.homepage         = 'https://github.com/shenmengyue-lab/TKBaseSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'shenmengyue@talk-cloud.com' => '605026935@qq.com' }
-  s.source           = { :git => 'https://github.com/shenmengyue@talk-cloud.com/TKBaseSDK.git', :tag => s.version.to_s }
+  s.author           = { '新拓云（北京）科技有限公司' => 'zhangjiangtao@talk-cloud.com }
+  s.source           = { :git => 'https://github.com/shenmengyue-lab/TKBaseSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
 
+  # 壳 target：保证 Pods 工程有可编译的源文件；实际能力在 vendored_frameworks 中
+  s.source_files = 'TKBaseSDK/Classes/**/*.{h,m}'
+
   s.ios.vendored_frameworks = 'TKBaseSDK/Frameworks/*.framework'
   # 资源已内嵌在各 .framework 的 .bundle 中，无需单独声明 s.resources
   # 与 use_frameworks! 配合使用；勿开启 static_framework，否则与动态 vendored framework 链接易冲突
-  s.static_framework = false
+  s.static_framework = true
 
-  # 2. 强制仅支持 arm64 架构（真机专属架构）
-  s.pod_target_xcconfig = {
-     "EXCLUDED_ARCHS[sdk=iphonesimulator*]" => "x86_64",
-     "VALID_ARCHS" => "arm64"
-   }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64 arm64e' }
 
   # 三方库
   s.dependency 'lottie-ios', '2.5.3'
