@@ -10,6 +10,10 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+iOS 12 and later
+
+## Integration Guide
+https://xinwww.talk-cloud.com/document/
 
 ## Installation
 
