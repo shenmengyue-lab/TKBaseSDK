@@ -176,10 +176,26 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/TKBaseSDK/TKBaseSDK.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKExtension.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKLivePlayer.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKMediaEngine.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKRoomSDK.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKUISDK.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKWhiteBoard.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/TKBaseSDK/TKBaseSDK.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKExtension.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKLivePlayer.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKMediaEngine.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKRoomSDK.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKUISDK.framework"
+  install_framework "${PODS_ROOT}/../../TKBaseSDK/Frameworks/TKWhiteBoard.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

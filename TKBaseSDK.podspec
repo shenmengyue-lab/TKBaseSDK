@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '12.0'
 
   # 壳 target：保证 Pods 工程有可编译的源文件；实际能力在 vendored_frameworks 中
-  s.source_files = 'TKBaseSDK/Classes/**/*.{h,m}'
+#  s.source_files = 'TKBaseSDK/Classes/**/*.{h,m}'
 
   s.ios.vendored_frameworks = 'TKBaseSDK/Frameworks/*.framework'
   # 资源已内嵌在各 .framework 的 .bundle 中，无需单独声明 s.resources

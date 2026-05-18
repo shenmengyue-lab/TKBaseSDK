@@ -1,15 +1,32 @@
 PODS:
-  - TKBaseSDK (0.1.0)
+  - lottie-ios (2.5.3)
+  - Masonry (1.1.0)
+  - SDWebImage (5.21.7):
+    - SDWebImage/Core (= 5.21.7)
+  - SDWebImage/Core (5.21.7)
+  - TKBaseSDK (4.18.3.2):
+    - lottie-ios (= 2.5.3)
+    - Masonry
+    - SDWebImage
 
 DEPENDENCIES:
   - TKBaseSDK (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - Masonry
+    - SDWebImage
 
 EXTERNAL SOURCES:
   TKBaseSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TKBaseSDK: 195e81959cbf9f1e12c2d0f35461121db47ba40b
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
+  TKBaseSDK: 115e806be6b225762bbcac80bce92f681e0af228
 
 PODFILE CHECKSUM: 48fc64303586b6baadb568105575633a093d6acd
 

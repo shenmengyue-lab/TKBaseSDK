@@ -7,7 +7,7 @@
 //
 
 #import "TKViewController.h"
-
+#import <TKUISDK/TKUISDK.h>
 @interface TKViewController ()
 
 @end
